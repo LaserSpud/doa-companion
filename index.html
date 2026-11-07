@@ -64,3 +64,5 @@ pageList.addEventListener('pointerdown',()=>pageScroller.classList.add('dragging
 addEventListener('resize',updatePageScrollbar);
 $('versionNotesBtn').onclick=()=>show('versionNotes');$('notesBack').onclick=()=>show('home');document.querySelectorAll('[data-key]').forEach(b=>b.onclick=()=>openDoa(b.dataset.key));$('back').onclick=()=>show('home');$('prev').onclick=()=>{if(idx>0){idx--;render()}};$('next').onclick=()=>{if(idx<lines().length-1){if(sequential&&idx===furthest)furthest++;idx++;render()}else finish()};$('toggle').onclick=()=>{translation=!translation;render()};$('resume').onclick=()=>openDoa(currentKey);$('restart').onclick=()=>{resetDoaCounters(currentKey);openDoa(currentKey)};$('homeBtn').onclick=()=>{updateHomeStreaks();show('home')};updateHomeStreaks();
 </script></body></html>
+
+<!-- Redeploy v1.12 -->
